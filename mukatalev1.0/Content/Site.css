@@ -1,0 +1,325 @@
+﻿
+@media  all and  (max-width: 700px) {
+    html, body {
+        max-width: 100%;
+        overflow-x: hidden;
+        background-image: url(/Images/bananas-clipping.jpg);
+        background-repeat: repeat;
+    }
+    .body-content {
+        width: 100%;
+        height: 100%;
+    }
+    .Post {
+        margin: 10px;
+        width: 90%;
+        height: 400px;
+        background-color: navajowhite;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        color: forestgreen;
+        border-radius: 15px;
+        display: block;
+        position: relative;
+    }
+    .Image {
+        display: block;
+        position: relative;
+        width: 70%;
+        height: 20rem;
+        border-radius: 10px;
+        left: 15%;
+    }
+    .comment-block {
+        background-color: olive;
+        border-radius: 15px;
+        padding: 15px;
+        width: 80%;
+        margin-left: 8%;
+    }
+    .Post-Title {
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        color: forestgreen;
+        display: block;
+        position: relative;
+        margin-top: 60px;
+        text-align: center;
+        background-image: url('/Images/veggies.jpg');
+        height: 80px;
+        color: mintcream;
+    }
+    .Title {
+        font-size: 40px;
+        display: block;
+        text-align: center;
+        padding-left: 10px;
+    }
+    .Description {
+        font-size: 20px;
+        display: block;
+        text-align: center;
+        background-color: darkkhaki;
+        width: 40%;
+        position: absolute;
+        left: 30%;
+    }
+
+    .price {
+        font-size: 15px;
+        position: relative;
+        display: block;
+        width: 80px;
+        height: 80px;
+        border-radius: 70px;
+        transform: rotate(-20deg);
+        background-color: cornsilk;
+        left: 4%;
+        text-align: center;
+        padding-top: 20px;
+    }
+      
+            .location {
+        padding-left: 10px;
+        font-size: 15px;
+        display: block;
+        text-align: center;
+        position: relative;
+    }
+
+    .createdat {
+        font-size: 14px;
+        display: block;
+        text-align: center;
+        position: relative;
+        padding-right: 20px;
+    }
+
+    .comment {
+        color: aliceblue;
+        text-align: left;
+        font-size: 30px;
+    }
+
+    .comment-date {
+        color: aliceblue;
+        text-align: right;
+        font-size: 15px;
+    }
+
+    .comment-form {
+        display: block;
+        width: 40%;
+        left: 28%;
+        position: relative;
+        text-align: center;
+        color: green;
+    }
+    .delete-comment {
+        text-align: right;
+        
+    }
+
+    .reply-block {
+        background-color: darkgoldenrod;
+        text-align: center;
+        font-size: 15px;
+        border-radius: 10px;
+        color: aliceblue;
+    }
+
+        .reply-block > .reply {
+            text-align: left;
+            padding-left: 10px;
+        }
+
+        .reply-block > .reply-date {
+            font-size: 10px;
+            text-align: right;
+            padding-right: 10px;
+        }
+
+    .methods {
+        position: relative;
+        left: 29%;
+    }
+
+    .submit-button {
+        right: 5%;
+    }
+}
+
+@media all and (min-width: 701px) {
+    body {
+        padding: 50px;
+        background-image: url(/Images/bananas-clipping.jpg);
+        background-repeat: repeat;
+    }
+
+    /* Set padding to keep content from hitting the edges */
+    .body-content {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    /* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+    .dl-horizontal dt {
+        white-space: normal;
+    }
+
+    /* Set width on the form input elements since they're 100% wide by default */
+    input,
+    select,
+    textarea {
+        max-width: 280px;
+    }
+
+    .Post {
+        width: 550px;
+        height: 400px;
+        background-color: navajowhite;
+        background-size: 300px 400px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        color: forestgreen;
+        border-radius: 15px;
+        display: block;
+        position: relative;
+        left: 25%;
+    }
+
+    .Image {
+        display: block;
+        position: relative;
+        bottom: 17%;
+        width: 37rem;
+        height: 25rem;
+        left: 15%;
+        border-radius: 10px;
+    }
+
+    .Post-Title {
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        color: forestgreen;
+        display: block;
+        position: relative;
+        left: 25%;
+    }
+
+    .Title {
+        font-size: 40px;
+        display: block;
+        text-align: center;
+        padding-left: 10px;
+    }
+
+    .Description {
+        font-size: 20px;
+        display: block;
+        text-align: center;
+        background-color: darkkhaki;
+        width: 40%;
+        position: absolute;
+        left: 30%;
+    }
+
+    .price {
+        font-size: 15px;
+        position: relative;
+        display: block;
+        width: 80px;
+        height: 80px;
+        border-radius: 70px;
+        transform: rotate(-20deg);
+        background-color: cornsilk;
+        left: 4%;
+        padding: 18px;
+        margin-bottom: 7%;
+        top: -1%;
+    }
+
+    .location {
+        padding-left: 10px;
+        font-size: 15px;
+        display: block;
+        text-align: left;
+        position: relative;
+        bottom: 17%;
+    }
+
+    .createdat {
+        font-size: 14px;
+        display: block;
+        text-align: right;
+        position: relative;
+        padding-right: 20px;
+        bottom: 22%;
+    }
+
+    .price > .text {
+        position: relative;
+        display: block;
+        left: 10%;
+        top: 25%;
+    }
+
+    .comment-block {
+        background-color: olive;
+        border-radius: 15px;
+        padding: 15px;
+        width: 40%;
+        margin-left: 30%;
+    }
+
+    .comment {
+        color: aliceblue;
+        text-align: left;
+        font-size: 30px;
+    }
+
+    .comment-date {
+        color: aliceblue;
+        text-align: right;
+        font-size: 15px;
+    }
+    .delete-comment {
+        text-align: right;
+    }
+
+    .comment-form {
+        display: block;
+        width: 40%;
+        left:30%;
+        position: relative;
+        text-align: center;
+        color: green;
+    }
+
+    .reply-block {
+        background-color: darkgoldenrod;
+        text-align: center;
+        font-size: 15px;
+        border-radius: 10px;
+        color: aliceblue;
+    }
+
+        .reply-block > .reply {
+            text-align: left;
+            padding-left: 10px;
+        }
+
+        .reply-block > .reply-date {
+            font-size: 10px;
+            text-align: right;
+            padding-right: 10px;
+        }
+
+    .methods {
+        position: relative;
+        left: 40%;
+    }
+
+    .submit-button {
+        right: 5%;
+    }
+}
+

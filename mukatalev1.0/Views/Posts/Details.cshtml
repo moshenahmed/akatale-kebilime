@@ -1,0 +1,49 @@
+﻿@model mukatalev1._0.Models.Post
+
+@{
+                /**/
+
+                ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Post</h4>
+    <hr />
+    <div class="Post">
+        <div class="Title">
+            @Html.ActionLink(Model.Title, "Index", "Posts")
+        </div>
+        <div class="Description">
+            @Html.DisplayFor(model => model.Description)
+        </div>
+        <div class="price">
+            Price: @Html.DisplayFor(model => model.Price):-
+        </div>
+        <img class="Image" src="~/Images/@Html.DisplayFor(model => model.Image)" alt="no" />
+        <div class="location">
+            Location : @Html.DisplayFor(model => model.Market)
+        </div>
+        <div class="createdat">
+            Date Posted @Html.DisplayFor(model => model.CreatedAt)
+        </div>
+    </div>
+</div>
+@Html.Action("Create","Comments")
+@*@using (Html.BeginForm("Create", "Posts", FormMethod.Post,
+                            new { enctype = "multipart/form-data" }))
+{
+    <div class="form-group">
+        @Html.LabelFor(model => model.Comment.Text, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.Comment.Text, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.Comment.Text, "", new { @class = "text-danger" })
+        </div>
+    </div>
+}*@
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Delete", "Delete", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
