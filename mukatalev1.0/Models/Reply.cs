@@ -12,6 +12,7 @@ namespace mukatalev1._0.Models
         public string UserId { get; set; }
         public int CommentId { get; set; }
         public string Text { get; set; }
+        public string Username { get; set; }
         public DateTime CreatedAt { get; set; }
         [ForeignKey("CommentId")]
         public virtual Comment Comment { get; set; }

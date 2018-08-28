@@ -20,12 +20,13 @@ namespace mukatalev1._0.Controllers
         {
             var comments = (from c in db.Comments
                             where c.PostId == PostId
+                            from r in c.Replies where r.CommentId == c.Id
 
                             select new CommentReplyViewModel
                             {
                                 Comment = c,
                                 UserTagComment = db.Users.FirstOrDefault(x => x.Id == c.UserId).UserName,
-                                Reply = c.Replies.ToList()
+                                reply = new List<Reply> { r}
                             }).ToList();
 
             return comments;
@@ -78,8 +79,8 @@ namespace mukatalev1._0.Controllers
                 //Response.Redirect(Url.Action("Details","Posts", new { id = PostId}));
                 Response.Redirect(Url.Action("Details", "Posts", new { id = PostId }));
             }
-
-             RedirectToAction("Login", "Account");
+            
+            RedirectToAction("Login", "Account", false);
         }
 
         // GET: Comments/Edit/5

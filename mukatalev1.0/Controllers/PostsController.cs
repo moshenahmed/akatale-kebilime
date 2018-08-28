@@ -46,7 +46,7 @@ namespace mukatalev1._0.Controllers
             var postCommentView = new PostCommentReplyViewModel
             {
                 Post = post,
-                UserTag = db.Users.First(x => x.Id == post.UserId).UserName,
+                UserTag = db.Users.FirstOrDefault(x => x.Id == post.UserId).UserName,
                 CommentReply = PostcommentReply
                 
             };

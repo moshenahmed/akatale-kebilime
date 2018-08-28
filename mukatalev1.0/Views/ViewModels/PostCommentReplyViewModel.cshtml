@@ -31,43 +31,51 @@
 <br/>
     @if (Model.CommentReply != null)
     {
-        foreach (var item in Model.CommentReply.Where(x => x.Comment != null))
+        foreach (var item in Model.CommentReply)
         {
             <div class="comment-block">
                 <div class="comment" style="">
                     @Html.DisplayFor(modelItem => item.Comment.Text)
                 </div>
-                <div>@Html.DisplayFor(modelItem => item.UserTagComment)</div>
+                <div class="comment-username">@Html.DisplayFor(modelItem => item.UserTagComment)</div>
                 <div class="comment-date">
                     @Html.DisplayFor(modelItem => item.Comment.CreatedAt)
                 </div>
-                @if (item.Reply != null)
+                @if (item.reply != null)
                 {
-                foreach (var reply in item.Reply)
-                {
+                    foreach (var reply in item.reply)
+                    {
                 <div class="reply-block">
                     <div class="reply" style="">
-                        @Html.DisplayFor(modelReply => reply.Text)
+                        @Html.DisplayFor(modelItem => reply.Text)
                     </div>
                     <div class="reply-date">
-                        @Html.DisplayFor(modelReply => reply.CreatedAt)
+                        @Html.DisplayFor(modelItem => reply.CreatedAt)
+                    </div>
+                    <div class="reply-username">
+                        @Html.DisplayFor(modelItem => reply.Username)
                     </div>
                 </div>
                 <br />
-                }
+                    }
 
                 }
-                <div class="delete-comment"> @Html.ActionLink("Delete", "Delete", "Comments", new { id = item.Comment.Id }, null)</div>
-                @Ajax.ActionLink("Reply", "Create", "Replies",
-                             new { commentId = item.Comment.Id, PostId = Model.Post.Id },
-                             new AjaxOptions { UpdateTargetId = @item.Comment.Id.ToString() })
+                
+                @if (item.Comment.UserId == Microsoft.AspNet.Identity.IdentityExtensions.GetUserId(User.Identity))
+                {<button class="delete-block">
+    @Html.ActionLink("Delete", "Delete", "Comments", new { id = item.Comment.Id }, new { @class = "delete-comment" })
+</button>}
+                 <button class="reply-button">
+                     @Ajax.ActionLink("Reply", "Create", "Replies",
+                                  new { commentId = item.Comment.Id, PostId = Model.Post.Id },
+                                  new AjaxOptions { UpdateTargetId = @item.Comment.Id.ToString() })
+                 </button>
                 <div id=@item.Comment.Id.ToString()>
                 </div>
             </div>
             <br />
         }
     }
-
 
 @Html.Action("Create", "Comments", new { PostId = Model.Post.Id })
 <div class="methods">

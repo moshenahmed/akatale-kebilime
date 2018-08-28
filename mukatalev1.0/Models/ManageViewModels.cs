@@ -121,6 +121,7 @@ namespace mukatalev1._0.Models
     {
         public Comment Comment { get; set; }
         public string UserTagComment { get; set; }
-        public List<Reply> Reply { get; set; }
+        public List<Reply> reply { get; set; }
+        
     }
 }

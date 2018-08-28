@@ -17,7 +17,7 @@ namespace mukatalev1._0.Controllers
         // GET: Replies
         public List<Reply> Index(int commentId)
         {
-            return db.Replies.Where(x => x.Comment.Id == commentId).ToList();
+            return db.Replies.Where(x => x.CommentId == commentId).ToList();
         }
 
         // GET: Replies/Details/5
@@ -48,21 +48,24 @@ namespace mukatalev1._0.Controllers
         [ValidateAntiForgeryToken]
         public void Create([Bind(Include = "Id,Text,CreatedAt")] Reply reply, int commentId, int PostId)
         {
-            if (ModelState.IsValid)
+            if (ModelState.IsValid && User.Identity.IsAuthenticated)
             {
                 var NewReply = new Reply
                 {
                     Text = reply.Text,
                     CreatedAt = DateTime.Now,
                     CommentId = commentId,
-                    UserId = db.Users.FirstOrDefault(x => x.UserName == User.Identity.Name).Id
+                    UserId = db.Users.FirstOrDefault(x => x.UserName == User.Identity.Name).Id,
+                    Username = db.Users.FirstOrDefault(x => x.UserName == User.Identity.Name).UserName
                 };
                 db.Replies.Add(NewReply);
                 db.SaveChanges();
                 Response.Redirect(Url.Action("Details", "Posts", new { id = PostId }));
             }
-
-            //return View(reply);
+            else
+            {
+                Response.Redirect(Url.Action("Login", "Account"));
+            }
         }
 
         // GET: Replies/Edit/5

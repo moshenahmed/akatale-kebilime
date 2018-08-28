@@ -113,6 +113,12 @@
         text-align: center;
         color: green;
     }
+
+    .delete-block {
+        right: 20%;
+        display: block;
+        position: absolute;
+    }
     .delete-comment {
         text-align: right;
         
@@ -136,10 +142,16 @@
             text-align: right;
             padding-right: 10px;
         }
+    .reply-username {
+        text-align: left;
+        font-size: 10px;
+        color: blue;
+        padding-left: 13px;
+    }
 
     .methods {
         position: relative;
-        left: 29%;
+        left: 14%;
     }
 
     .submit-button {
@@ -198,11 +210,13 @@
     }
 
     .Post-Title {
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        color: forestgreen;
+        color: beige;
         display: block;
         position: relative;
-        left: 25%;
+        TEXT-ALIGN: center;
+        font-size: 80px;
+        font-family: monospace;
+        background-image: url(/Images/veggies.jpg);
     }
 
     .Title {
@@ -281,6 +295,11 @@
         text-align: right;
         font-size: 15px;
     }
+    .delete-block {
+        right: 34%;
+        display: block;
+        position: absolute;
+    }
     .delete-comment {
         text-align: right;
     }
@@ -292,6 +311,10 @@
         position: relative;
         text-align: center;
         color: green;
+    }
+    .comment-username {
+        color: blue;
+        font-size: 13px;
     }
 
     .reply-block {
@@ -312,6 +335,12 @@
             text-align: right;
             padding-right: 10px;
         }
+    .reply-username {
+        text-align: left;
+        font-size: 13px;
+        color: blue;
+        padding-left: 10px;
+    }
 
     .methods {
         position: relative;
