@@ -20,13 +20,13 @@ namespace mukatalev1._0.Controllers
         {
             var comments = (from c in db.Comments
                             where c.PostId == PostId
-                            from r in c.Replies where r.CommentId == c.Id
+                           
 
                             select new CommentReplyViewModel
                             {
                                 Comment = c,
                                 UserTagComment = db.Users.FirstOrDefault(x => x.Id == c.UserId).UserName,
-                                reply = new List<Reply> { r}
+                                reply = c.Replies.ToList()
                             }).ToList();
 
             return comments;
