@@ -26,6 +26,9 @@
         <div class="createdat">
             @Html.DisplayFor(model => model.Post.CreatedAt)
         </div>
+        <div class="comment-contact">
+            +256 @Html.DisplayFor(model => model.Post.Contact)
+        </div>
     </div>
 </div>
 <br/>
@@ -34,7 +37,7 @@
         foreach (var item in Model.CommentReply)
         {
             <div class="comment-block">
-                <div class="comment" style="">
+                <div class="comment">
                     @Html.DisplayFor(modelItem => item.Comment.Text)
                 </div>
                 <div class="comment-username">@Html.DisplayFor(modelItem => item.UserTagComment)</div>
@@ -79,8 +82,10 @@
 
 @Html.Action("Create", "Comments", new { PostId = Model.Post.Id })
 <div class="methods">
-    @Html.ActionLink("Kyusa", "Edit", new { id = Model.Post.Id }) |
-    @Html.ActionLink("Sangula", "Delete", new { id = Model.Post.Id }) |
+    @if(User.Identity.Name == Model.Post.User.UserName) {
+    @Html.ActionLink("Kyusa", "Edit", new { id = Model.Post.Id }) 
+    @Html.ActionLink("Sangula", "Delete", new { id = Model.Post.Id })}
+
     @Html.ActionLink("Dayo Ewasokelwa", "Index", "Posts")
 </div>
 

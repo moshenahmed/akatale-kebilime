@@ -128,3 +128,4 @@ C:\Users\mosh\source\repos\mukatalev1.0\mukatalev1.0\obj\Debug\mukatalev1._0.Mig
 C:\Users\mosh\source\repos\mukatalev1.0\mukatalev1.0\obj\Debug\mukatalev1._0.Migrations.addNewParamsForRegisterAndLogin.resources
 C:\Users\mosh\source\repos\mukatalev1.0\mukatalev1.0\obj\Debug\mukatalev1._0.Migrations.RemoveEmailFromRegister.resources
 C:\Users\mosh\source\repos\mukatalev1.0\mukatalev1.0\obj\Debug\mukatalev1._0.Migrations.init18.resources
+C:\Users\mosh\source\repos\mukatalev1.0\mukatalev1.0\obj\Debug\mukatalev1._0.Migrations.init67.resources

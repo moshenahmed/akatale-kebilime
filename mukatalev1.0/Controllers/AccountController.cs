@@ -151,8 +151,13 @@ namespace mukatalev1._0.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.FullName, Status=model.Status };
+                var user = new ApplicationUser { UserName = model.FullName, Status=model.Status};
                 var result = await UserManager.CreateAsync(user, model.Password);
+                if (user.Status)
+                {
+                    UserManager.AddToRole(user.Id, "Admin");
+                }
+                else { UserManager.AddToRole(user.Id, "User"); }
                 if (result.Succeeded)
                 {
                     await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);

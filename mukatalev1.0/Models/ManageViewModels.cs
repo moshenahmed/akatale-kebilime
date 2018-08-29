@@ -97,6 +97,9 @@ namespace mukatalev1._0.Models
         public int Price { get; set; }
         [Required]
         public Markets Market { get; set; }
+        [Required]
+        [Range(9, 9)]
+        public int Contact { get; set; }
         public enum Markets
         {
             Nakawa,

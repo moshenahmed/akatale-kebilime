@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Data;
 using System.Data.Entity;
 using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using System.Windows.Forms;
 using mukatalev1._0.Models;
 
 namespace mukatalev1._0.Controllers
@@ -20,8 +22,6 @@ namespace mukatalev1._0.Controllers
         {
             var comments = (from c in db.Comments
                             where c.PostId == PostId
-                           
-
                             select new CommentReplyViewModel
                             {
                                 Comment = c,
@@ -30,8 +30,6 @@ namespace mukatalev1._0.Controllers
                             }).ToList();
 
             return comments;
-
-
         }
 
         // GET: Comments/Details/5
@@ -79,7 +77,7 @@ namespace mukatalev1._0.Controllers
                 //Response.Redirect(Url.Action("Details","Posts", new { id = PostId}));
                 Response.Redirect(Url.Action("Details", "Posts", new { id = PostId }));
             }
-            
+
             RedirectToAction("Login", "Account", false);
         }
 
@@ -148,6 +146,10 @@ namespace mukatalev1._0.Controllers
             return RedirectToAction("Create");
         }
 
+        public void PopUpWindow()
+        {
+            MessageBox.Show("Moshen");
+        }
         protected override void Dispose(bool disposing)
         {
             if (disposing)

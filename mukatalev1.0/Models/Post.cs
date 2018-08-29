@@ -17,6 +17,7 @@ namespace mukatalev1._0.Models
         public Markets Market { get; set; }
         public DateTime CreatedAt { get; set; }
         public string Image { get; set; }
+        public int Contact { get; set; }
 
         public ICollection<Comment> Comments { get; set; }
         [ForeignKey("UserId")]

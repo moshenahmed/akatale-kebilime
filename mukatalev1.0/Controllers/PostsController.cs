@@ -80,13 +80,14 @@ namespace mukatalev1._0.Controllers
                 file.SaveAs(path2);
                 System.IO.File.Delete(path);
                 var NewPost = new Post
-                {
+                { 
                     Title = post.Title,
                     Description = post.Description,
                     Price = post.Price,
                     Market = post.Market,
                     Image = RandomFileName,
                     CreatedAt = DateTime.Now,
+                    Contact = post.Contact,
                     UserId = db.Users.FirstOrDefault(x => x.UserName == User.Identity.Name).Id
                 };                
                 db.Posts.Add(NewPost);
@@ -117,11 +118,24 @@ namespace mukatalev1._0.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Title,Description,Price,Market,CreatedAt,Image")] Post post)
+        public ActionResult Edit([Bind(Include = "Id,Title,Description,Price,Market,CreatedAt,Image")] Post post, int id)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(post).State = EntityState.Modified;
+                var Editedpost = db.Posts.Find(id);
+                var NewPost = new Post
+                {
+                    Id = id,
+                    Title = post.Title,
+                    Description = post.Description,
+                    Price = post.Price,
+                    CreatedAt = Editedpost.CreatedAt,
+                    Image = Editedpost.Image,
+                    Contact = post.Contact,
+                    UserId = Editedpost.UserId
+                };
+                
+                db.Entry(NewPost).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }

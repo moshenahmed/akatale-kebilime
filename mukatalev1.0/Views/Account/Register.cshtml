@@ -18,14 +18,16 @@
             @Html.TextBoxFor(m => m.FullName, new { @class = "form-control" })
         </div>
     </div>
-
+    if (User.Identity.IsAuthenticated)
+    {
     <div class="form-group">
-        @Html.Label("Olina Kyotunda", new { @class = "col-md-2 control-label" })
+        @Html.Label("Are you an Admin?", new { @class = "col-md-2 control-label" })
         <div class="col-md-10">
-            @Html.RadioButtonFor(m => m.Status,true)Ye
+            @Html.RadioButtonFor(m => m.Status, true)Ye
             @Html.RadioButtonFor(m => m.Status, false)Nedda
         </div>
     </div>
+    }
     <div class="form-group">
         @Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })
         <div class="col-md-10">

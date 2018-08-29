@@ -1,5 +1,7 @@
 namespace mukatalev1._0.Migrations
 {
+    using Microsoft.AspNet.Identity;
+    using Microsoft.AspNet.Identity.EntityFramework;
     using mukatalev1._0.Models;
     using System;
     using System.Data.Entity;
@@ -28,6 +30,15 @@ namespace mukatalev1._0.Migrations
             //        CreatedAt = DateTime.Now.AddYears(-5)
             //    }
             //    );
+            
+            //     var store = new RoleStore<IdentityRole>(context);
+            //var manager = new RoleManager<IdentityRole>(store);
+            //var role = new IdentityRole { Name = "Admin" };
+            //var role2 = new IdentityRole { Name = "User" };
+
+            //manager.Create(role);
+            //manager.Create(role2);
+
         }
     }
 }

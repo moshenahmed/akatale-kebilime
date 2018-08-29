@@ -80,7 +80,7 @@ namespace mukatalev1._0.Controllers
             {
                 return HttpNotFound();
             }
-            return View(reply);
+            return PartialView(reply);
         }
 
         // POST: Replies/Edit/5

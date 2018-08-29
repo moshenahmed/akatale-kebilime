@@ -46,6 +46,7 @@
         background-image: url('/Images/veggies.jpg');
         height: 80px;
         color: mintcream;
+        font-size: 60px;
     }
     .Title {
         font-size: 40px;
@@ -283,6 +284,9 @@
         width: 40%;
         margin-left: 30%;
     }
+    .more{
+        
+    }
 
     .comment {
         color: aliceblue;
@@ -315,6 +319,16 @@
     .comment-username {
         color: blue;
         font-size: 13px;
+    }
+    .comment-contact {
+        display: block;
+        position: relative;
+        left: 70%;
+        bottom: 107%;
+        text-align: right;
+        padding-right: 10px;
+        width: 30%;
+        background-color: red;
     }
 
     .reply-block {
