@@ -118,7 +118,7 @@ namespace mukatalev1._0.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Title,Description,Price,Market,CreatedAt,Image")] Post post, int id)
+        public ActionResult Edit([Bind(Include = "Id,Title,Description,Price,Market,CreatedAt,Image,Contact")] Post post, int id)
         {
             if (ModelState.IsValid)
             {

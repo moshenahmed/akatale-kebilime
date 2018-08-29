@@ -114,6 +114,14 @@
         text-align: center;
         color: green;
     }
+    .comment-contact {
+        display: block;
+        position: relative;
+        left: 25%;
+        bottom: 70%;
+        text-align: center;
+        width: 50%;
+    }
 
     .delete-block {
         right: 20%;
@@ -293,6 +301,7 @@
         text-align: left;
         font-size: 30px;
     }
+    
 
     .comment-date {
         color: aliceblue;
@@ -324,11 +333,10 @@
         display: block;
         position: relative;
         left: 70%;
-        bottom: 107%;
+        bottom: 32%;
         text-align: right;
-        padding-right: 10px;
+        padding-right: 20px;
         width: 30%;
-        background-color: red;
     }
 
     .reply-block {
