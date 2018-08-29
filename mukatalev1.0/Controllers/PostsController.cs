@@ -67,7 +67,7 @@ namespace mukatalev1._0.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Title,Description,Price,Market,Image")] PostViewModel post, HttpPostedFileBase file)
+        public ActionResult Create([Bind(Include = "Id,Title,Description,Price,Market,Image,Contact")] PostViewModel post, HttpPostedFileBase file)
         {
             if (ModelState.IsValid && file != null)
             {
@@ -122,20 +122,14 @@ namespace mukatalev1._0.Controllers
         {
             if (ModelState.IsValid)
             {
-                var Editedpost = db.Posts.Find(id);
-                var NewPost = new Post
-                {
-                    Id = id,
-                    Title = post.Title,
-                    Description = post.Description,
-                    Price = post.Price,
-                    CreatedAt = Editedpost.CreatedAt,
-                    Image = Editedpost.Image,
-                    Contact = post.Contact,
-                    UserId = Editedpost.UserId
-                };
+                var Editedpost = db.Posts.First( x => x.Id == id);
+                Editedpost.Title = post.Title;
+                Editedpost.Description = post.Description;
+                Editedpost.Price = post.Price;
+                Editedpost.Contact = post.Contact;
+                Editedpost.Market = post.Market;
                 
-                db.Entry(NewPost).State = EntityState.Modified;
+                db.Entry(Editedpost).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
