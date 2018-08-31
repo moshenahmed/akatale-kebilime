@@ -400,5 +400,26 @@
     .submit-button {
         right: 5%;
     }
+
+    .goin {
+        opacity: 0.3;
+        width: 70px;
+        height: 70px;
+        display: block;
+        position: relative;
+        margin-top: -750px;
+        left: 76%;
+    }
+        .goin:hover {
+            opacity: 1.0;
+            width: 70px;
+            height: 70px;
+            display: block;
+            position: relative;
+            margin-top: -750px;
+            left: 76%;
+        }
+    }
+
 }
 

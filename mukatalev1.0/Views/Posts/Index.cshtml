@@ -9,29 +9,32 @@
 <br />
 @foreach (var item in Model)
 {
-    <div class="Post">
-        <div class="Title">
-            @Html.ActionLink(item.Title, "Details", new { id = item.Id })
-        </div>
-        <div class="Description">
-            @Html.DisplayFor(modelItem => item.Description)
-        </div>
-        <div class="price">
-            Ebbeyi: @Html.DisplayFor(modelItem => item.Price) UGX
-        </div>
-        <img class="Image" src="~/Images/@Html.DisplayFor(modelItem => item.Image)" alt="no" />
-        <div class="location">
-            Akatale W'endi : @Html.DisplayFor(modelItem => item.Market)
-        </div>
-        <div class="createdat">
-            Date Posted @Html.DisplayFor(modelItem => item.CreatedAt)
-        </div>
-        @*<ul>
-                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
-                @Html.ActionLink("Details", "Details", new { id = item.Id }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
-            </ul>*@
+<div class="Post">
+    <div class="Title">
+        @Html.ActionLink(item.Title, "Details", new { id = item.Id })
     </div>
+    <div class="Description">
+        @Html.DisplayFor(modelItem => item.Description)
+    </div>
+    <div class="price">
+        Ebbeyi: @Html.DisplayFor(modelItem => item.Price) UGX
+    </div>
+    <img class="Image" src="~/Images/@Html.DisplayFor(modelItem => item.Image)" alt="no" />
+    <div class="location">
+        Akatale W'endi : @Html.DisplayFor(modelItem => item.Market)
+    </div>
+    <div class="createdat">
+        Date Posted @Html.DisplayFor(modelItem => item.CreatedAt)
+    </div>
+    <a  class="goin" href='@Url.Action("Details", "Posts", new { id = item.Id })'>
+        <img  class="goin" src='@Url.Content("~/Images/goin.png")' />
+    </a>
+    @*<ul>
+            @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+        </ul>*@
+</div>
     <br />
     <br />
 
