@@ -37,17 +37,30 @@
         margin-left: 8%;
     }
     .Post-Title {
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        color: forestgreen;
+        display: block;
+        font-family: monospace;
+        background-image: url(/Images/veggies.jpg);
+        position: static;
+        height: 20%;
+        width: 100%;
+        left: 5%;
+    }
+    .Post-Title-two {
+        background-color: darkslategrey;
+        width: 32%;
+        left: 34%;
         display: block;
         position: relative;
-        margin-top: 60px;
-        text-align: center;
-        background-image: url('/Images/veggies.jpg');
-        height: 80px;
-        color: mintcream;
+        height: 70%;
+        top: 20%;
         font-size: 60px;
+        text-align: center;
+        font-family: serif;
+        color: lawngreen;
+        border-radius: 50px;
+        letter-spacing: 20px;
     }
+
     .Title {
         font-size: 40px;
         display: block;
@@ -219,14 +232,31 @@
     }
 
     .Post-Title {
-        color: beige;
         display: block;
-        position: relative;
-        TEXT-ALIGN: center;
-        font-size: 80px;
         font-family: monospace;
         background-image: url(/Images/veggies.jpg);
+        position: static;
+        height: 20%;
+        width: 100%;
+        left: 5%;
+
     }
+    }
+.Post-Title-two {
+    background-color: darkslategrey;
+    width: 32%;
+    left: 34%;
+    display: block;
+    position: relative;
+    height: 70%;
+    top: 20%;
+    font-size: 60px;
+    text-align: center;
+    font-family: serif;
+    color: lawngreen;
+    border-radius: 50px;
+    letter-spacing: 20px;
+}
 
     .Title {
         font-size: 40px;

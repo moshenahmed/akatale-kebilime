@@ -1,10 +1,10 @@
 ﻿@model mukatalev1._0.Models.PostViewModel
 
 @{
-    ViewBag.Title = "Create";
+    ViewBag.Title = "Juzaamu";
 }
 
-<h2>Create</h2>
+<h2>Juzaamu amabanga gano wansi!</h2>
 
 
 @using (Html.BeginForm("Create", "Posts", FormMethod.Post,
@@ -13,7 +13,6 @@
     @Html.AntiForgeryToken()
     
 <div class="form-horizontal">
-    <h4>Post</h4>
     <hr />
     @Html.ValidationSummary(true, "", new { @class = "text-danger" })
     <div class="form-group">

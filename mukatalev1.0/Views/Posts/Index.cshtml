@@ -1,7 +1,12 @@
 ﻿@model IEnumerable<mukatalev1._0.Models.Post>
-
-
-<h2 class="Post-Title">MAKETI</h2>
+<br />
+<div class="Post-Title">
+    <div class="Post-Title-two">MAKETI</div>
+</div>
+<br />
+<br />
+<br />
+<br />
 @foreach (var item in Model)
 {
     <div class="Post">
@@ -9,23 +14,23 @@
             @Html.ActionLink(item.Title, "Details", new { id = item.Id })
         </div>
         <div class="Description">
-             @Html.DisplayFor(modelItem => item.Description)
+            @Html.DisplayFor(modelItem => item.Description)
         </div>
         <div class="price">
-                Ebbeyi: @Html.DisplayFor(modelItem => item.Price) UGX
+            Ebbeyi: @Html.DisplayFor(modelItem => item.Price) UGX
         </div>
-        <img class="Image" src="~/Images/@Html.DisplayFor(modelItem => item.Image)" alt="no"/>
+        <img class="Image" src="~/Images/@Html.DisplayFor(modelItem => item.Image)" alt="no" />
         <div class="location">
-           Akatale W'endi : @Html.DisplayFor(modelItem => item.Market)
+            Akatale W'endi : @Html.DisplayFor(modelItem => item.Market)
         </div>
         <div class="createdat">
-           Date Posted @Html.DisplayFor(modelItem => item.CreatedAt)
+            Date Posted @Html.DisplayFor(modelItem => item.CreatedAt)
         </div>
         @*<ul>
-            @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id = item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id = item.Id })
-        </ul>*@
+                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+            </ul>*@
     </div>
     <br />
     <br />

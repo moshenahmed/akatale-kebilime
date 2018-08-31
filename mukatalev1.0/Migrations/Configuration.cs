@@ -1,12 +1,11 @@
 namespace mukatalev1._0.Migrations
 {
     using Microsoft.AspNet.Identity;
-    using Microsoft.AspNet.Identity.EntityFramework;
     using mukatalev1._0.Models;
-    using System;
-    using System.Data.Entity;
     using System.Data.Entity.Migrations;
-    using System.Linq;
+    using Microsoft.AspNet.Identity.Owin;
+    using Microsoft.Owin.Security;
+    using Microsoft.AspNet.Identity.EntityFramework;
 
     internal sealed class Configuration : DbMigrationsConfiguration<mukatalev1._0.Models.ApplicationDbContext>
     {
@@ -30,7 +29,7 @@ namespace mukatalev1._0.Migrations
             //        CreatedAt = DateTime.Now.AddYears(-5)
             //    }
             //    );
-            
+
             //     var store = new RoleStore<IdentityRole>(context);
             //var manager = new RoleManager<IdentityRole>(store);
             //var role = new IdentityRole { Name = "Admin" };
@@ -38,7 +37,15 @@ namespace mukatalev1._0.Migrations
 
             //manager.Create(role);
             //manager.Create(role2);
-
+            //var store = new UserStore<ApplicationUser>(context);
+            //var manager = new UserManager<ApplicationUser>(store);
+            //var user = new ApplicationUser
+            //{
+            //    UserName = "Admin",
+            //    Status = true,
+            //};
+            // manager.Create(user, "Test1!");
+            //manager.AddToRole(user.Id, "Admin");
         }
     }
 }
