@@ -1,0 +1,19 @@
+﻿@model mukatalev1._0.Models.Comment
+
+@{
+    Layout=null;
+}
+<div>    
+    <hr />
+        <div>
+            @Html.DisplayFor(model => model.Text)
+        </div>
+
+        <div>
+            @Html.DisplayFor(model => model.CreatedAt)
+        </div>
+</div>
+@*<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>*@

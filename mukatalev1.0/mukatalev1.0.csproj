@@ -256,29 +256,26 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Images\abundance.jpg" />
     <Content Include="Images\avo.jpg" />
-    <Content Include="Images\back1.jpg" />
     <Content Include="Images\background.jpg" />
     <Content Include="Images\bananas-clipping.jpg" />
-    <Content Include="Images\boxes.jpg" />
     <Content Include="Images\cofee.jpg" />
     <Content Include="Images\fruit.jpg" />
     <Content Include="Images\goin.png" />
+    <Content Include="Images\goout.png" />
     <Content Include="Images\mangoes 2.jpg" />
     <Content Include="Images\mangoes.jpg" />
     <Content Include="Images\matooke.jpg" />
     <Content Include="Images\melon.jpg" />
-    <Content Include="Images\Passion-1.jpg" />
     <Content Include="Images\passionfruits.jpg" />
     <Content Include="Images\star.jpg" />
-    <Content Include="Images\tomatoes.jpg" />
     <Content Include="Images\veggies.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
