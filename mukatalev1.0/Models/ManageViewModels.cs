@@ -98,7 +98,7 @@ namespace mukatalev1._0.Models
         [Required]
         public Markets Market { get; set; }
         [Required]
-        [Range(9, 9)]
+        [Range(700000000,799999999, ErrorMessage ="Invalid Phone Number")]
         public int Contact { get; set; }
         public enum Markets
         {
