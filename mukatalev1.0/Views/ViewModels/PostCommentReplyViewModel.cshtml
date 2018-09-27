@@ -15,7 +15,7 @@
             @Html.DisplayFor(model => model.Post.Description)
         </div>
         <div class="price">
-            Ebbeyi: @Html.DisplayFor(model => model.Post.Price) UGX
+            Price: @Html.DisplayFor(model => model.Post.Price) UGX
         </div>
         <img class="Image" src="~/Images/@Html.DisplayFor(model => model.Post.Image)" alt="no" />
         <div class="location">
@@ -88,13 +88,13 @@
     @if (User.Identity.Name == Model.Post.User.UserName)
     {
         <il>
-    @Html.ActionLink("Kyusa", "Edit", new { id = Model.Post.Id }) |
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Post.Id }) |
 </il>
 <il>
-    @Html.ActionLink("Sangula", "Delete", new { id = Model.Post.Id }) |
+    @Html.ActionLink("Delete", "Delete", new { id = Model.Post.Id }) |
 </il> }
 
-    @Html.ActionLink("Dayo Ewasokelwa", "Index", "Posts")
+    @Html.ActionLink("Back", "Index", "Posts")
 </div>
 
 @Scripts.Render("~/bundles/jquery")
