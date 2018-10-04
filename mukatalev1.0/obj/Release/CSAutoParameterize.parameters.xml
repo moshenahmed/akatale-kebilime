@@ -3,7 +3,4 @@
   <parameter name="DefaultConnection-Web.config Connection String" description="DefaultConnection Connection String used in web.config by the application to access the database." defaultValue="Data Source=(LocalDb)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\aspnet-mukatalev1.0-20180802022658.mdf;Initial Catalog=aspnet-mukatalev1.0-20180802022658;Integrated Security=True" tags="SqlConnectionString">
     <parameterEntry kind="XmlFile" scope="C:\\Users\\mosh\\source\\repos\\mukatalev1\.0\\mukatalev1\.0\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
   </parameter>
-  <parameter name="DefaultConnection_DatabasePublish-Web.config Connection String" description="DefaultConnection_DatabasePublish Connection String used in web.config by the application to access the database." defaultValue="DefaultConnection_DatabasePublish.ConnetionString" tags="SqlConnectionString">
-    <parameterEntry kind="XmlFile" scope="C:\\Users\\mosh\\source\\repos\\mukatalev1\.0\\mukatalev1\.0\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection_DatabasePublish']/@connectionString" />
-  </parameter>
 </parameters>
