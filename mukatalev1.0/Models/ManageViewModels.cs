@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNet.Identity;
 using Microsoft.Owin.Security;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
 namespace mukatalev1._0.Models
@@ -96,6 +97,7 @@ namespace mukatalev1._0.Models
         [Range(100, 1000000)]
         public int Price { get; set; }
         [Required]
+        [DisplayName("Location")]
         public Markets Market { get; set; }
         [Required]
         [Range(700000000,799999999, ErrorMessage ="Invalid Phone Number")]
@@ -111,6 +113,45 @@ namespace mukatalev1._0.Models
             Nateete,
             Kireka,
             Wandegeya,
+            Mpanga,
+            Mulago,
+            Munyonyo,
+            Namirembe,
+            PortBell,
+            Mukono,
+            Seeta,
+            Jinja,
+            Kajjansi,
+            Lweza,
+            EnteebeTown,
+            Gayaza,
+            Bwaise,
+            Bombo,
+            Wobulenzi,
+            Luwero,
+            Masaka,
+            Gulu,
+            Lira,
+            Mbale,
+            Soroti,
+            Karamoja,
+            Adjumani,
+            Arua,
+            Kapchorwa,
+            Mbarara,
+            Ishaka,
+            Bushenyi,
+            Lyantonde,
+            Kabulasoke,
+            Kasese,
+            Mutukula,
+            Busia,
+            Tororo,
+            Nakasongola,
+            Malaba,
+            Apaa,
+            Tirinyi,
+            Ntungamo
         }
     }
 

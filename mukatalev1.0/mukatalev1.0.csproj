@@ -272,6 +272,8 @@
     <Content Include="Images\passionfruits.jpg" />
     <Content Include="Images\star.jpg" />
     <Content Include="Images\veggies.jpg" />
+    <Content Include="Images\WhatsApp-icon-for-iOS.png" />
+    <Content Include="Images\whatsapp.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
