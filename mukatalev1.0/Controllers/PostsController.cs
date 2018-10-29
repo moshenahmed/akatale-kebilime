@@ -16,6 +16,19 @@ namespace mukatalev1._0.Controllers
     {
         private ApplicationDbContext db = new ApplicationDbContext();
         private CommentsController comment = new CommentsController();
+        public string FileUpload(HttpPostedFileBase file)
+        {
+            var Image = Path.GetFileName(file.FileName);
+            var path = Path.Combine(Server.MapPath("~/Images"), Image);
+            file.SaveAs(path);
+            string RandomFileName = Path.GetFileNameWithoutExtension(Path.GetRandomFileName()) + ".jpg";
+            var path2 = Path.Combine(Server.MapPath("~/Images"), RandomFileName);
+            System.IO.File.Move(path, path2);
+            file.SaveAs(path2);
+            System.IO.File.Delete(path);
+
+            return RandomFileName;
+        }
 
         // GET: Posts
         public ActionResult Index()
@@ -71,21 +84,13 @@ namespace mukatalev1._0.Controllers
         {
             if (ModelState.IsValid && file != null)
             {
-                var Image = Path.GetFileName(file.FileName);
-                var path = Path.Combine(Server.MapPath("~/Images"), Image);
-                file.SaveAs(path);
-                string RandomFileName = Path.GetFileNameWithoutExtension(Path.GetRandomFileName()) + ".jpg";
-                var path2 = Path.Combine(Server.MapPath("~/Images"), RandomFileName);
-                System.IO.File.Move(path, path2);
-                file.SaveAs(path2);
-                System.IO.File.Delete(path);
                 var NewPost = new Post
                 { 
                     Title = post.Title,
                     Description = post.Description,
                     Price = post.Price,
                     Market = post.Market,
-                    Image = RandomFileName,
+                    Image = FileUpload(file),
                     CreatedAt = DateTime.Now,
                     Contact = post.Contact,
                     UserId = db.Users.FirstOrDefault(x => x.UserName == User.Identity.Name).Id

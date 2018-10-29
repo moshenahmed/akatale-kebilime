@@ -31,18 +31,23 @@ namespace mukatalev1._0.Controllers
 
         // POST: JobTasks/Create
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        public ActionResult Create(JobTaskViewModel jobtask, HttpPostedFileBase file)
         {
-            try
+            var userid = db.Users.FirstOrDefault(x => x.FullName == User.Identity.Name).Id;
+            
+            var NewJob = new JobTask
             {
-                // TODO: Add insert logic here
+                Title = jobtask.Title,
+                JobDescription = jobtask.JobDescription,
+                MainBid = jobtask.MainBid,
+                UserId = userid,
+                Date = DateTime.Now,
+                Image =  new PostsController().FileUpload(file)
+            };
 
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
+            db.JobTasks.Add(NewJob);
+            db.SaveChanges();
+            return RedirectToAction("JobTask");
         }
 
         // GET: JobTasks/Edit/5

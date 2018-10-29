@@ -246,6 +246,10 @@
     <Compile Include="Migrations\201810241256370_jobtask and userbid tables.Designer.cs">
       <DependentUpon>201810241256370_jobtask and userbid tables.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201810291701559_adding date.cs" />
+    <Compile Include="Migrations\201810291701559_adding date.Designer.cs">
+      <DependentUpon>201810291701559_adding date.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Comment.cs" />
@@ -407,6 +411,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201810241256370_jobtask and userbid tables.resx">
       <DependentUpon>201810241256370_jobtask and userbid tables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810291701559_adding date.resx">
+      <DependentUpon>201810291701559_adding date.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

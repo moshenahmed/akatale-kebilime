@@ -131,3 +131,4 @@ C:\Users\mosh\source\repos\mukatalev1.0\mukatalev1.0\obj\Debug\mukatalev1._0.Mig
 C:\Users\mosh\source\repos\mukatalev1.0\mukatalev1.0\obj\Debug\mukatalev1._0.Migrations.init67.resources
 C:\Users\mosh\source\repos\mukatalev1.0\mukatalev1.0\obj\Debug\mukatalev1._0.Migrations.jobtasksanduserbidstable.resources
 C:\Users\mosh\source\repos\mukatalev1.0\mukatalev1.0\obj\Debug\mukatalev1._0.Migrations.jobtaskanduserbidtables.resources
+C:\Users\mosh\source\repos\mukatalev1.0\mukatalev1.0\obj\Debug\mukatalev1._0.Migrations.addingdate.resources

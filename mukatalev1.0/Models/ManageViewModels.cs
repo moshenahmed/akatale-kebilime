@@ -100,7 +100,7 @@ namespace mukatalev1._0.Models
         [DisplayName("Location")]
         public Markets Market { get; set; }
         [Required]
-        [Range(700000000,799999999, ErrorMessage ="Invalid Phone Number")]
+        [Range(700000000, 799999999, ErrorMessage = "Invalid Phone Number")]
         public int Contact { get; set; }
         public enum Markets
         {
@@ -166,6 +166,13 @@ namespace mukatalev1._0.Models
         public Comment Comment { get; set; }
         public string UserTagComment { get; set; }
         public List<Reply> reply { get; set; }
-        
+
+    }
+
+    public class JobTaskViewModel{
+        public string Title { get; set; }
+        public string JobDescription { get; set; }
+        public int MainBid { get; set; }
+        public string Image { get; set; }
     }
 }
