@@ -219,6 +219,11 @@
         font-size: 18px;
         color: forestgreen;
     }
+    .phone {
+        width: 30px;
+        height: 30px;
+        border-radius: 10px;
+    }
 
 }
 
@@ -499,6 +504,12 @@
         text-align: left;
         font-size: 18px;
         color: forestgreen;
+    }
+
+    .phone{
+        width:30px;
+        height:30px;
+        border-radius:10px;
     }
 
 }

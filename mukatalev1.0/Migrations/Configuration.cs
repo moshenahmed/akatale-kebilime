@@ -46,6 +46,15 @@ namespace mukatalev1._0.Migrations
             //};
             // manager.Create(user, "Test1!");
             //manager.AddToRole(user.Id, "Admin");
+
+            //context.JobTasks.AddOrUpdate(
+            //    new JobTask {
+            //        Title = "Test",
+            //        JobDescription = "Test",
+            //        MainBid = 500,
+            //        Image ="testurl"
+                    
+            //    });
         }
     }
 }

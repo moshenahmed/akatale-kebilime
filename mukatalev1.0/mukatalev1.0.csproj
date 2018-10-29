@@ -199,6 +199,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\CommentsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\JobTasksController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\PostsController.cs" />
     <Compile Include="Controllers\RepliesController.cs" />
@@ -237,6 +238,14 @@
     <Compile Include="Migrations\201808291314217_init67.Designer.cs">
       <DependentUpon>201808291314217_init67.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201810241223588_jobtasks and userbids table.cs" />
+    <Compile Include="Migrations\201810241223588_jobtasks and userbids table.Designer.cs">
+      <DependentUpon>201810241223588_jobtasks and userbids table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810241256370_jobtask and userbid tables.cs" />
+    <Compile Include="Migrations\201810241256370_jobtask and userbid tables.Designer.cs">
+      <DependentUpon>201810241256370_jobtask and userbid tables.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Comment.cs" />
@@ -254,6 +263,7 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\JobTasks.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -262,6 +272,7 @@
     <Content Include="Images\background.jpg" />
     <Content Include="Images\bananas-clipping.jpg" />
     <Content Include="Images\cofee.jpg" />
+    <Content Include="Images\digging.jpg" />
     <Content Include="Images\fruit.jpg" />
     <Content Include="Images\goin.png" />
     <Content Include="Images\goout.png" />
@@ -273,7 +284,6 @@
     <Content Include="Images\star.jpg" />
     <Content Include="Images\veggies.jpg" />
     <Content Include="Images\WhatsApp-icon-for-iOS.png" />
-    <Content Include="Images\whatsapp.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
@@ -345,6 +355,11 @@
     <Content Include="Views\Replies\Details.cshtml" />
     <Content Include="Views\Replies\Edit.cshtml" />
     <Content Include="Views\Replies\Index.cshtml" />
+    <Content Include="Views\JobTasks\Create.cshtml" />
+    <Content Include="Views\JobTasks\Delete.cshtml" />
+    <Content Include="Views\JobTasks\Details.cshtml" />
+    <Content Include="Views\JobTasks\Edit.cshtml" />
+    <Content Include="Views\JobTasks\JobTasks.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -386,6 +401,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201808291314217_init67.resx">
       <DependentUpon>201808291314217_init67.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810241223588_jobtasks and userbids table.resx">
+      <DependentUpon>201810241223588_jobtasks and userbids table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810241256370_jobtask and userbid tables.resx">
+      <DependentUpon>201810241256370_jobtask and userbid tables.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -24,6 +24,7 @@ namespace mukatalev1._0.Models
         public ICollection<Post> Posts { get; set; }
         public ICollection<Comment> Comments { get; set; }
         public ICollection<Reply> Replies { get; set; }
+
     }
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
@@ -35,10 +36,12 @@ namespace mukatalev1._0.Models
          public DbSet<Post> Posts { get; set; }
         public DbSet<Reply> Replies { get; set; }
         public DbSet<Comment> Comments { get; set; }
+        public DbSet<JobTask> JobTasks { get; set; }
+        public DbSet<UserBid> UserBids { get; set; }
 
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();
-        }    
+        }
     }
 }
