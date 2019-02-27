@@ -96,22 +96,11 @@ namespace mukatalev1._0.Models
         [Range(100, 1000000)]
         public int Price { get; set; }
         [Required]
-        public Markets Market { get; set; }
+        public string Location { get; set; }
         [Required]
         [Range(700000000,799999999, ErrorMessage ="Invalid Phone Number")]
         public int Contact { get; set; }
-        public enum Markets
-        {
-            Nakawa,
-            Nakasero,
-            Bugolobi,
-            StBalikudembeOwino,
-            Kalerwe,
-            Abaita_Ababiri,
-            Nateete,
-            Kireka,
-            Wandegeya,
-        }
+       
     }
 
     public class PostCommentReplyViewModel

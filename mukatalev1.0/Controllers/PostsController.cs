@@ -22,7 +22,7 @@ namespace mukatalev1._0.Controllers
         {
             return View(db.Posts.OrderByDescending(x => x.CreatedAt).ToList());
         }
-
+         
         // GET: Posts/Details/5
         public ActionResult Details(int? id)
         {
@@ -67,7 +67,7 @@ namespace mukatalev1._0.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Title,Description,Price,Market,Image,Contact")] PostViewModel post, HttpPostedFileBase file)
+        public ActionResult Create([Bind(Include = "Id,Title,Description,Price,Location,Image,Contact")] PostViewModel post, HttpPostedFileBase file)
         {
             if (ModelState.IsValid && file != null)
             {
@@ -84,7 +84,7 @@ namespace mukatalev1._0.Controllers
                     Title = post.Title,
                     Description = post.Description,
                     Price = post.Price,
-                    Market = post.Market,
+                    Location = post.Location,
                     Image = RandomFileName,
                     CreatedAt = DateTime.Now,
                     Contact = post.Contact,
@@ -127,7 +127,7 @@ namespace mukatalev1._0.Controllers
                 Editedpost.Description = post.Description;
                 Editedpost.Price = post.Price;
                 Editedpost.Contact = post.Contact;
-                Editedpost.Market = post.Market;
+                Editedpost.Location = post.Location;
                 
                 db.Entry(Editedpost).State = EntityState.Modified;
                 db.SaveChanges();

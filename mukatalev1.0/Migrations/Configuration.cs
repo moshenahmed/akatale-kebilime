@@ -6,12 +6,13 @@ namespace mukatalev1._0.Migrations
     using Microsoft.AspNet.Identity.Owin;
     using Microsoft.Owin.Security;
     using Microsoft.AspNet.Identity.EntityFramework;
+    using System;
 
     internal sealed class Configuration : DbMigrationsConfiguration<mukatalev1._0.Models.ApplicationDbContext>
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
         }
 
         protected override void Seed(mukatalev1._0.Models.ApplicationDbContext context)
@@ -21,31 +22,32 @@ namespace mukatalev1._0.Migrations
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
             //  to avoid creating duplicate seed data.
             //context.Posts.AddOrUpdate(
-            //    new Post {
+            //    new Post
+            //    {
             //        Title = "Test Title",
             //        Description = "Description",
             //        Price = 500,
-            //        Market = PostViewModel.Markets.Abaita_Ababiri,
+            //        Location = "Kampala uganda",
             //        CreatedAt = DateTime.Now.AddYears(-5)
             //    }
             //    );
 
-            //     var store = new RoleStore<IdentityRole>(context);
+            //var store = new RoleStore<IdentityRole>(context);
             //var manager = new RoleManager<IdentityRole>(store);
             //var role = new IdentityRole { Name = "Admin" };
             //var role2 = new IdentityRole { Name = "User" };
 
             //manager.Create(role);
             //manager.Create(role2);
-            //var store = new UserStore<ApplicationUser>(context);
-            //var manager = new UserManager<ApplicationUser>(store);
+            //var store2 = new UserStore<ApplicationUser>(context);
+            //var manager2 = new UserManager<ApplicationUser>(store2);
             //var user = new ApplicationUser
             //{
             //    UserName = "Admin",
             //    Status = true,
             //};
-            // manager.Create(user, "Test1!");
-            //manager.AddToRole(user.Id, "Admin");
+            //manager2.Create(user, "Test1!");
+            //manager2.AddToRole(user.Id, "Admin");
         }
     }
 }

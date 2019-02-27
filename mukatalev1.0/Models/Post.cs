@@ -14,7 +14,7 @@ namespace mukatalev1._0.Models
         public string Title { get; set; }
         public string Description { get; set; }
         public int Price { get; set; }
-        public Markets Market { get; set; }
+        public string Location { get; set; }
         public DateTime CreatedAt { get; set; }
         public string Image { get; set; }
         public int Contact { get; set; }

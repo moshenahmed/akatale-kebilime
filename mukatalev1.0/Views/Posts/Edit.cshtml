@@ -42,10 +42,10 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.Market, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.Location, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EnumDropDownListFor(model => model.Market, htmlAttributes: new { @class = "form-control" })
-                @Html.ValidationMessageFor(model => model.Market, "", new { @class = "text-danger" })
+                @Html.EnumDropDownListFor(model => model.Location, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Location, "", new { @class = "text-danger" })
             </div>
         </div>
 

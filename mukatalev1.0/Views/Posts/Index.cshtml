@@ -32,11 +32,11 @@ Take a picture of what you intend to sell here, for example... Tomatoes.
         @Html.DisplayFor(modelItem => item.Description)
     </div>
     <div class="price">
-        price: @Html.DisplayFor(modelItem => item.Price) UGX
+        price: @Html.DisplayFor(modelItem => item.Price) :-
     </div>
     <img class="Image" src="~/Images/@Html.DisplayFor(modelItem => item.Image)" alt="no" />
     <div class="location">
-        Market Place: @Html.DisplayFor(modelItem => item.Market)
+        Market Place: @Html.DisplayFor(modelItem => item.Location)
     </div>
     <div class="createdat">
         Date Posted @Html.DisplayFor(modelItem => item.CreatedAt)

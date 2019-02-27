@@ -15,13 +15,13 @@
             @Html.DisplayFor(model => model.Post.Description)
         </div>
         <div class="price">
-            Price: @Html.DisplayFor(model => model.Post.Price) UGX
+            Price: @Html.DisplayFor(model => model.Post.Price) :-
         </div>
         <img class="Image" src="~/Images/@Html.DisplayFor(model => model.Post.Image)" alt="no" />
         <div class="location">
             Post by: @Html.DisplayFor(model => model.UserTag)
             <br/>
-            Location : @Html.DisplayFor(model => model.Post.Market)
+            Location : @Html.DisplayFor(model => model.Post.Location)
         </div>
         <div class="createdat">
             @Html.DisplayFor(model => model.Post.CreatedAt)
